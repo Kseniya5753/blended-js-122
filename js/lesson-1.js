@@ -167,22 +167,22 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-function getNumbers(min, max) {
+//  function getNumbers(min, max) {
 
-    for (let i = max; i >= min; i--)
-        console.log(i);
+//     for (let i = max; i >= min; i--)
+//         console.log(i);
 
-    let sum = 0; 
- for (let i = min; i <= max; i++) {
-     if (i % 2 === 0) {
-        sum += i;
+    //  let sum = 0; 
+  // for (let i = min; i <= max; i++) {
+//      if (i % 2 === 0) {
+        //  sum += i;
          
-    }
+    //  }
     
-    }
-    return sum;
-}
-console.log(getNumbers(8, 15));
+//     }
+    //  return sum;
+//  }
+//  console.log(getNumbers(8, 15));
 
 
 // №8:
@@ -190,6 +190,23 @@ console.log(getNumbers(8, 15));
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
+// function min(a, b) {
+    
+//     if (typeof a !== "number" || typeof b !== "number") {
+//         return "Not a number!";
+//         }
+//         if (a < b) {
+//             return a;
+       
+//         } else if (a > b) {
+//             return b;
+//         }
+    
+    
+// }
+// console.log(min(8, 15));
+// console.log(min(40, 17));
+// =================================
 
 // №9:
 
@@ -198,12 +215,49 @@ console.log(getNumbers(8, 15));
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
+// function isAdult(age) {
+//   if (typeof age !== "number") {
+//     return "Not a number!";
+//   }
+
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return confirm("Do you have parents permission?");
+//   }
+// }
+
+
+// console.log(isAdult(20));
+// console.log(isAdult(15)); 
+// console.log(isAdult("gguuuu")); 
+
+
+// ============================
+
 // №10:
 
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
 // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("fizzbuzz");
+//     } else if (i % 3 === 0) {
+//       console.log("fizz");
+//     } else if (i % 5 === 0) {
+//       console.log("buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// fizzBuzz(15);
+
 //===========================
 
 
@@ -214,3 +268,94 @@ console.log(getNumbers(8, 15));
 //let namberMin = Number(prompt("min"));
     
 //let namberMax = Number(prompt("max"));
+// ==================================================
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+
+//   const values = Object.values(salaries);
+
+
+//   for (const value of values) {
+    
+//     totalSalary += value;
+//     //console.log(totalSalary);
+//   }
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({}));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+
+// ======================================================
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Tell-Tale Heart",
+//     author: "Edgar Allan Poe",
+//     rating: 7.75,
+//   }
+// ];
+// for (const book of books) {
+//   console.log(book); // Об'єкт книги
+//   console.log(book.title); // Назва
+//   console.log(book.author); // Автор
+//   console.log(book.rating); // Рейтинг
+// }
+// ===============================================
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const color of colors) {
+
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+  
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+// ====================================
+
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+  
+//   return null; // если не нашли совпадения
+// }
+
+// console.log(getProductPrice("Radar"));   // 1300
+// console.log(getProductPrice("Grip"));    // 1200
+// console.log(getProductPrice("Scanner")); // 2700
+// console.log(getProductPrice("Droid"));   // 400
+// console.log(getProductPrice("Engine"));  // null
+//=======================================
